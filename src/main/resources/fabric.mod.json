@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "cursed-minecraft-kit",
+	"version": "${version}",
+	"name": "Cursed Minecraft Kit",
+	"description": "Cursed prop commands for making weird Minecraft videos: /camouflage, /eatable, /actastotem, /maxstack, /killwithmsg.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/cursed-minecraft-kit/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"khoa.cmk.CursedMinecraftKit"
+		],
+		"client": [
+			"khoa.cmk.client.CursedMinecraftKitClient"
+		],
+		"fabric-datagen": [
+			"khoa.cmk.client.CursedMinecraftKitDataGenerator"
+		]
+	},
+	"mixins": [
+		"cursed-minecraft-kit.mixins.json",
+		{
+			"config": "cursed-minecraft-kit.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"required": true,
+	"package": "khoa.cmk.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"BlockDestroySpeedMixin",
+		"ItemStackValidateComponentsMixin",
+		"ItemEnchantmentsLevelCapMixin",
+		"ItemEnchantmentsMutableLevelCapMixin",
+		"AnvilMenuMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
